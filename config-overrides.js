@@ -1,4 +1,4 @@
-const { addBabelPlugins, override } = require("customize-cra");
-module.exports = override(
+import { addBabelPlugins, override } from "customize-cra";
+export default override(
   ...addBabelPlugins("@mightymeld/runtime/babel-plugin-mightymeld")
 );
