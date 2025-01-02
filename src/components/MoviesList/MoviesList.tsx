@@ -6,7 +6,7 @@ interface IMovieListProps {
   recommendedList: Array<IMovieDataType>;
 }
 
-const MovieList = ({ recommendedList }: IMovieListProps) => {
+const MoviesList = ({ recommendedList }: IMovieListProps) => {
   return (
     <Grid2 container spacing={2}>
       {recommendedList.map((movie) => (
@@ -20,4 +20,4 @@ const MovieList = ({ recommendedList }: IMovieListProps) => {
   );
 };
 
-export default MovieList;
+export default MoviesList;

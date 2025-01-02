@@ -6,7 +6,7 @@ interface IMovieTrendingListProps {
   trendingList: Array<IMovieDataType>;
 }
 
-const MovieTrendingList = ({ trendingList }: IMovieTrendingListProps) => {
+const MoviesTrendingList = ({ trendingList }: IMovieTrendingListProps) => {
   return (
     <Box
       sx={{
@@ -26,4 +26,4 @@ const MovieTrendingList = ({ trendingList }: IMovieTrendingListProps) => {
   );
 };
 
-export default MovieTrendingList;
+export default MoviesTrendingList;
