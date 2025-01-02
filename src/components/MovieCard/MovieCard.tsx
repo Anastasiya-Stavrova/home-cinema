@@ -68,7 +68,7 @@ const MovieCard = ({ movie }: IMovieCardProps) => {
                 <Typography
                   fontSize={10}
                   color="#E0E0E0"
-                  aria-label="movie category"
+                  aria-label="Movie Category"
                 >
                   {movie.category}
                 </Typography>
@@ -96,7 +96,7 @@ const MovieCard = ({ movie }: IMovieCardProps) => {
               </Box>
             </Grid2>
 
-            <Typography aria-label="movie rating" padding={0}>
+            <Typography aria-label="Movie Rating" padding={0}>
               {movie.title}
             </Typography>
           </Grid2>

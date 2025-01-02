@@ -28,6 +28,7 @@ const Layout = ({ children }: ILayoutProps) => {
         sx={{
           overflowY: "scroll",
           width: "100%",
+          height: "100%",
         }}
       >
         {children}
