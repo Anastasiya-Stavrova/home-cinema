@@ -9,10 +9,10 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import movieIcon from "../../assets/icons/icon-category-movie.svg";
-import tvSeriesIcon from "../../assets/icons/icon-category-tv.svg";
 import BookmarkIcon from "../Icons/bookmark-icon";
 import BookmarkEmptyIcon from "../Icons/bookmark-empy-icon";
+import movieIcon from "../../assets/icons/icon-category-movie.svg";
+import tvSeriesIcon from "../../assets/icons/icon-category-tv.svg";
 
 interface IMovieCardProps {
   movie: IMovieDataType;

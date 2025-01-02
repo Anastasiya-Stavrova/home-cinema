@@ -1,7 +1,11 @@
 import { useContext } from "react";
 import { IMovieDataType } from "../../types/movieData";
 import { MovieContext } from "../../context/movie-context";
-import { Card, CardContent } from "@mui/material";
+import { Box, Card, CardContent, Grid2, Typography } from "@mui/material";
+import BookmarkIcon from "../Icons/bookmark-icon";
+import BookmarkEmptyIcon from "../Icons/bookmark-empy-icon";
+import movieIcon from "../../assets/icons/icon-category-movie.svg";
+import tvSeriesIcon from "../../assets/icons/icon-category-tv.svg";
 
 interface IMovieCardProps {
   movie: IMovieDataType;
@@ -9,26 +13,118 @@ interface IMovieCardProps {
 
 const MovieCard = ({ movie }: IMovieCardProps) => {
   const { dispatch } = useContext(MovieContext);
+  const handleToggleBookmark = (id: string) => {
+    dispatch({ type: "TOOGLE BOOKMARK", id });
+  };
 
   return (
     <Card
-      key={movie.id}
-      elevation={0}
-      style={{ backgroundColor: "transparent" }}
+      variant="outlined"
+      sx={{ bgcolor: "transparent", color: "#E0E0E0", my: 3, border: "none" }}
     >
-      <CardContent
-        style={{
-          padding: 0,
-          position: "relative",
-          overflowX: "scroll",
-          display: "flex",
-        }}
-      >
-        <img
-          src={movie.thumbnail.regular.large}
-          alt={movie.title}
-          style={{ width: "300px", height: "100%", borderRadius: "8px" }}
-        />
+      <CardContent sx={{ p: 0, position: "relative" }}>
+        <Grid2 container spacing={1}>
+          <Grid2>
+            <img
+              src={movie.thumbnail.regular.large}
+              alt=""
+              style={{ width: "400px", height: "180px", borderRadius: "8px" }}
+            />
+          </Grid2>
+
+          <Grid2 size={{ xs: 6 }}>
+            <Grid2 container spacing={1} alignItems="center">
+              <Grid2>
+                <Typography
+                  fontSize={10}
+                  color="#E0E0E0"
+                  aria-label="year of movie"
+                >
+                  {movie.year}
+                </Typography>
+              </Grid2>
+              <Grid2>
+                <Box
+                  sx={{
+                    width: "4px",
+                    height: "4px",
+                    background: "#BDBDBD",
+                    borderRadius: "50%",
+                  }}
+                />
+              </Grid2>
+              <Grid2>
+                <img
+                  src={movie.category === "Movies" ? movieIcon : tvSeriesIcon}
+                  alt=""
+                  width={16}
+                  height={16}
+                />
+              </Grid2>
+              <Grid2>
+                <Typography
+                  fontSize={10}
+                  color="#E0E0E0"
+                  aria-label="movie category"
+                >
+                  {movie.category}
+                </Typography>
+              </Grid2>
+              <Grid2>
+                <Box
+                  sx={{
+                    width: "4px",
+                    height: "4px",
+                    background: "#BDBDBD",
+                    borderRadius: "50%",
+                  }}
+                />
+              </Grid2>
+              <Grid2>
+                <Typography
+                  fontSize={10}
+                  color="#E0E0E0"
+                  aria-label="movie rating"
+                >
+                  {movie.rating}
+                </Typography>
+              </Grid2>
+            </Grid2>
+            <Typography aria-label="movie rating" padding={0}>
+              {movie.title}
+            </Typography>
+          </Grid2>
+          <Grid2
+            size={{ xs: 2 }}
+            sx={{ position: "absolute", top: 0, right: 0 }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "flex-end",
+                alignItems: "center",
+                p: "1rem",
+              }}
+            >
+              <Box
+                sx={{
+                  p: "1rem",
+                  backgroundColor: "black",
+                  borderRadius: "100%",
+                  cursor: "pointer",
+                  "&:hover": { opacity: 0.8 },
+                }}
+                onClick={() => handleToggleBookmark(movie.id)}
+              >
+                {movie.isBookmarked ? (
+                  <BookmarkIcon fill={"#E0E0E0"} />
+                ) : (
+                  <BookmarkEmptyIcon />
+                )}
+              </Box>
+            </Box>
+          </Grid2>
+        </Grid2>
       </CardContent>
     </Card>
   );

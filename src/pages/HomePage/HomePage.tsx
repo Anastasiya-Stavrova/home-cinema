@@ -60,7 +60,7 @@ const HomePage = () => {
               <InputAdornment position="start">
                 <img
                   src={SearchIcon}
-                  alt="search icon"
+                  alt="Search Icon"
                   width={20}
                   height={20}
                 />
@@ -69,6 +69,7 @@ const HomePage = () => {
           />
         </Paper>
       </Box>
+
       <Box py={2} px={4}>
         {search === "" ? (
           <Box width="100%">
@@ -76,18 +77,25 @@ const HomePage = () => {
               <Typography variant="h5" component="h1" my={6} fontWeight={400}>
                 Trending
               </Typography>
+
               <MovieTrendingList trendingList={trendingList} />
             </Box>
+
             <Box width="100%">
               <Typography variant="h5" component="h1" my={6} fontWeight={400}>
                 Recommended For You
               </Typography>
+
               <MovieList recommendedList={recommendedList} />
             </Box>
           </Box>
         ) : (
           <Box width="100%">
-            <Typography>Found</Typography>
+            <Typography>
+              Found {searchList.length} results for "{search}"
+            </Typography>
+
+            <MovieList recommendedList={searchList} />
           </Box>
         )}
       </Box>
