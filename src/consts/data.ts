@@ -4,13 +4,13 @@ export const moviesData = [
     title: "Beyond Earth",
     thumbnail: {
       trending: {
-        small: "../assets/img/movies/beyond-earth/trending/small.jpg",
-        large: "../assets/img/movies/beyond-earth/trending/large.jpg",
+        small: "./movies/beyond-earth/trending/small.jpg",
+        large: "./movies/beyond-earth/trending/large.jpg",
       },
       regular: {
-        small: "../assets/img/movies/beyond-earth/regular/small.jpg",
-        medium: "../assets/img/movies/beyond-earth/regular/medium.jpg",
-        large: "../assets/img/movies/beyond-earth/regular/large.jpg",
+        small: "./movies/beyond-earth/regular/small.jpg",
+        medium: "./movies/beyond-earth/regular/medium.jpg",
+        large: "./movies/beyond-earth/regular/large.jpg",
       },
     },
     year: 2019,
@@ -24,13 +24,13 @@ export const moviesData = [
     title: "Bottom Gear",
     thumbnail: {
       trending: {
-        small: "../assets/img/movies/bottom-gear/trending/small.jpg",
-        large: "../assets/img/movies/bottom-gear/trending/large.jpg",
+        small: "./movies/bottom-gear/trending/small.jpg",
+        large: "./movies/bottom-gear/trending/large.jpg",
       },
       regular: {
-        small: "../assets/img/movies/bottom-gear/regular/small.jpg",
-        medium: "../assets/img/movies/bottom-gear/regular/medium.jpg",
-        large: "../assets/img/movies/bottom-gear/regular/large.jpg",
+        small: "./movies/bottom-gear/regular/small.jpg",
+        medium: "./movies/bottom-gear/regular/medium.jpg",
+        large: "./movies/bottom-gear/regular/large.jpg",
       },
     },
     year: 2021,
@@ -44,13 +44,13 @@ export const moviesData = [
     title: "Undiscovered Cities",
     thumbnail: {
       trending: {
-        small: "../assets/img/movies/undiscovered-cities/trending/small.jpg",
-        large: "../assets/img/movies/undiscovered-cities/trending/large.jpg",
+        small: "./movies/undiscovered-cities/trending/small.jpg",
+        large: "./movies/undiscovered-cities/trending/large.jpg",
       },
       regular: {
-        small: "../assets/img/movies/undiscovered-cities/regular/small.jpg",
-        medium: "../assets/img/movies/undiscovered-cities/regular/medium.jpg",
-        large: "../assets/img/movies/undiscovered-cities/regular/large.jpg",
+        small: "./movies/undiscovered-cities/regular/small.jpg",
+        medium: "./movies/undiscovered-cities/regular/medium.jpg",
+        large: "./movies/undiscovered-cities/regular/large.jpg",
       },
     },
     year: 2019,
@@ -64,13 +64,13 @@ export const moviesData = [
     title: "1998",
     thumbnail: {
       trending: {
-        small: "../assets/img/movies/1998/trending/small.jpg",
-        large: "../assets/img/movies/1998/trending/large.jpg",
+        small: "./movies/1998/trending/small.jpg",
+        large: "./movies/1998/trending/large.jpg",
       },
       regular: {
-        small: "../assets/img/movies/1998/regular/small.jpg",
-        medium: "../assets/img/movies/1998/regular/medium.jpg",
-        large: "../assets/img/movies/1998/regular/large.jpg",
+        small: "./movies/1998/regular/small.jpg",
+        medium: "./movies/1998/regular/medium.jpg",
+        large: "./movies/1998/regular/large.jpg",
       },
     },
     year: 2021,
@@ -84,13 +84,13 @@ export const moviesData = [
     title: "Dark Side of the Moon",
     thumbnail: {
       trending: {
-        small: "../assets/img/movies/dark-side-of-the-moon/trending/small.jpg",
-        large: "../assets/img/movies/dark-side-of-the-moon/trending/large.jpg",
+        small: "./movies/dark-side-of-the-moon/trending/small.jpg",
+        large: "./movies/dark-side-of-the-moon/trending/large.jpg",
       },
       regular: {
-        small: "../assets/img/movies/dark-side-of-the-moon/regular/small.jpg",
-        medium: "../assets/img/movies/dark-side-of-the-moon/regular/medium.jpg",
-        large: "../assets/img/movies/dark-side-of-the-moon/regular/large.jpg",
+        small: "./movies/dark-side-of-the-moon/regular/small.jpg",
+        medium: "./movies/dark-side-of-the-moon/regular/medium.jpg",
+        large: "./movies/dark-side-of-the-moon/regular/large.jpg",
       },
     },
     year: 2018,
@@ -104,9 +104,9 @@ export const moviesData = [
     title: "The Great Lands",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/the-great-lands/regular/small.jpg",
-        medium: "../assets/img/movies/the-great-lands/regular/medium.jpg",
-        large: "../assets/img/movies/the-great-lands/regular/large.jpg",
+        small: "./movies/the-great-lands/regular/small.jpg",
+        medium: "./movies/the-great-lands/regular/medium.jpg",
+        large: "./movies/the-great-lands/regular/large.jpg",
       },
     },
     year: 2019,
@@ -120,9 +120,9 @@ export const moviesData = [
     title: "The Diary",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/the-diary/regular/small.jpg",
-        medium: "../assets/img/movies/the-diary/regular/medium.jpg",
-        large: "../assets/img/movies/the-diary/regular/large.jpg",
+        small: "./movies/the-diary/regular/small.jpg",
+        medium: "./movies/the-diary/regular/medium.jpg",
+        large: "./movies/the-diary/regular/large.jpg",
       },
     },
     year: 2019,
@@ -136,9 +136,9 @@ export const moviesData = [
     title: "Earth’s Untouched",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/earths-untouched/regular/small.jpg",
-        medium: "../assets/img/movies/earths-untouched/regular/medium.jpg",
-        large: "../assets/img/movies/earths-untouched/regular/large.jpg",
+        small: "./movies/earths-untouched/regular/small.jpg",
+        medium: "./movies/earths-untouched/regular/medium.jpg",
+        large: "./movies/earths-untouched/regular/large.jpg",
       },
     },
     year: 2017,
@@ -152,9 +152,9 @@ export const moviesData = [
     title: "No Land Beyond",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/no-land-beyond/regular/small.jpg",
-        medium: "../assets/img/movies/no-land-beyond/regular/medium.jpg",
-        large: "../assets/img/movies/no-land-beyond/regular/large.jpg",
+        small: "./movies/no-land-beyond/regular/small.jpg",
+        medium: "./movies/no-land-beyond/regular/medium.jpg",
+        large: "./movies/no-land-beyond/regular/large.jpg",
       },
     },
     year: 2019,
@@ -168,9 +168,9 @@ export const moviesData = [
     title: "During the Hunt",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/during-the-hunt/regular/small.jpg",
-        medium: "../assets/img/movies/during-the-hunt/regular/medium.jpg",
-        large: "../assets/img/movies/during-the-hunt/regular/large.jpg",
+        small: "./movies/during-the-hunt/regular/small.jpg",
+        medium: "./movies/during-the-hunt/regular/medium.jpg",
+        large: "./movies/during-the-hunt/regular/large.jpg",
       },
     },
     year: 2016,
@@ -184,9 +184,9 @@ export const moviesData = [
     title: "Autosport the Series",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/autosport-the-series/regular/small.jpg",
-        medium: "../assets/img/movies/autosport-the-series/regular/medium.jpg",
-        large: "../assets/img/movies/autosport-the-series/regular/large.jpg",
+        small: "./movies/autosport-the-series/regular/small.jpg",
+        medium: "./movies/autosport-the-series/regular/medium.jpg",
+        large: "./movies/autosport-the-series/regular/large.jpg",
       },
     },
     year: 2016,
@@ -200,9 +200,9 @@ export const moviesData = [
     title: "Same Answer II",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/same-answer-2/regular/small.jpg",
-        medium: "../assets/img/movies/same-answer-2/regular/medium.jpg",
-        large: "../assets/img/movies/same-answer-2/regular/large.jpg",
+        small: "./movies/same-answer-2/regular/small.jpg",
+        medium: "./movies/same-answer-2/regular/medium.jpg",
+        large: "./movies/same-answer-2/regular/large.jpg",
       },
     },
     year: 2017,
@@ -216,9 +216,9 @@ export const moviesData = [
     title: "Below Echo",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/below-echo/regular/small.jpg",
-        medium: "../assets/img/movies/below-echo/regular/medium.jpg",
-        large: "../assets/img/movies/below-echo/regular/large.jpg",
+        small: "./movies/below-echo/regular/small.jpg",
+        medium: "./movies/below-echo/regular/medium.jpg",
+        large: "./movies/below-echo/regular/large.jpg",
       },
     },
     year: 2016,
@@ -232,9 +232,9 @@ export const moviesData = [
     title: "The Rockies",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/the-rockies/regular/small.jpg",
-        medium: "../assets/img/movies/the-rockies/regular/medium.jpg",
-        large: "../assets/img/movies/the-rockies/regular/large.jpg",
+        small: "./movies/the-rockies/regular/small.jpg",
+        medium: "./movies/the-rockies/regular/medium.jpg",
+        large: "./movies/the-rockies/regular/large.jpg",
       },
     },
     year: 2015,
@@ -248,9 +248,9 @@ export const moviesData = [
     title: "Relentless",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/relentless/regular/small.jpg",
-        medium: "../assets/img/movies/relentless/regular/medium.jpg",
-        large: "../assets/img/movies/relentless/regular/large.jpg",
+        small: "./movies/relentless/regular/small.jpg",
+        medium: "./movies/relentless/regular/medium.jpg",
+        large: "./movies/relentless/regular/large.jpg",
       },
     },
     year: 2017,
@@ -264,9 +264,9 @@ export const moviesData = [
     title: "Community of Ours",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/community-of-ours/regular/small.jpg",
-        medium: "../assets/img/movies/community-of-ours/regular/medium.jpg",
-        large: "../assets/img/movies/community-of-ours/regular/large.jpg",
+        small: "./movies/community-of-ours/regular/small.jpg",
+        medium: "./movies/community-of-ours/regular/medium.jpg",
+        large: "./movies/community-of-ours/regular/large.jpg",
       },
     },
     year: 2018,
@@ -280,9 +280,9 @@ export const moviesData = [
     title: "Van Life",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/van-life/regular/small.jpg",
-        medium: "../assets/img/movies/van-life/regular/medium.jpg",
-        large: "../assets/img/movies/van-life/regular/large.jpg",
+        small: "./movies/van-life/regular/small.jpg",
+        medium: "./movies/van-life/regular/medium.jpg",
+        large: "./movies/van-life/regular/large.jpg",
       },
     },
     year: 2015,
@@ -296,9 +296,9 @@ export const moviesData = [
     title: "The Heiress",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/the-heiress/regular/small.jpg",
-        medium: "../assets/img/movies/the-heiress/regular/medium.jpg",
-        large: "../assets/img/movies/the-heiress/regular/large.jpg",
+        small: "./movies/the-heiress/regular/small.jpg",
+        medium: "./movies/the-heiress/regular/medium.jpg",
+        large: "./movies/the-heiress/regular/large.jpg",
       },
     },
     year: 2021,
@@ -312,9 +312,9 @@ export const moviesData = [
     title: "Off the Track",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/off-the-track/regular/small.jpg",
-        medium: "../assets/img/movies/off-the-track/regular/medium.jpg",
-        large: "../assets/img/movies/off-the-track/regular/large.jpg",
+        small: "./movies/off-the-track/regular/small.jpg",
+        medium: "./movies/off-the-track/regular/medium.jpg",
+        large: "./movies/off-the-track/regular/large.jpg",
       },
     },
     year: 2017,
@@ -328,9 +328,9 @@ export const moviesData = [
     title: "Whispering Hill",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/whispering-hill/regular/small.jpg",
-        medium: "../assets/img/movies/whispering-hill/regular/medium.jpg",
-        large: "../assets/img/movies/whispering-hill/regular/large.jpg",
+        small: "./movies/whispering-hill/regular/small.jpg",
+        medium: "./movies/whispering-hill/regular/medium.jpg",
+        large: "./movies/whispering-hill/regular/large.jpg",
       },
     },
     year: 2017,
@@ -344,9 +344,9 @@ export const moviesData = [
     title: "112",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/112/regular/small.jpg",
-        medium: "../assets/img/movies/112/regular/medium.jpg",
-        large: "../assets/img/movies/112/regular/large.jpg",
+        small: "./movies/112/regular/small.jpg",
+        medium: "./movies/112/regular/medium.jpg",
+        large: "./movies/112/regular/large.jpg",
       },
     },
     year: 2013,
@@ -360,9 +360,9 @@ export const moviesData = [
     title: "Lone Heart",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/lone-heart/regular/small.jpg",
-        medium: "../assets/img/movies/lone-heart/regular/medium.jpg",
-        large: "../assets/img/movies/lone-heart/regular/large.jpg",
+        small: "./movies/lone-heart/regular/small.jpg",
+        medium: "./movies/lone-heart/regular/medium.jpg",
+        large: "./movies/lone-heart/regular/large.jpg",
       },
     },
     year: 2017,
@@ -376,9 +376,9 @@ export const moviesData = [
     title: "Production Line",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/production-line/regular/small.jpg",
-        medium: "../assets/img/movies/production-line/regular/medium.jpg",
-        large: "../assets/img/movies/production-line/regular/large.jpg",
+        small: "./movies/production-line/regular/small.jpg",
+        medium: "./movies/production-line/regular/medium.jpg",
+        large: "./movies/production-line/regular/large.jpg",
       },
     },
     year: 2018,
@@ -392,9 +392,9 @@ export const moviesData = [
     title: "Dogs",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/dogs/regular/small.jpg",
-        medium: "../assets/img/movies/dogs/regular/medium.jpg",
-        large: "../assets/img/movies/dogs/regular/large.jpg",
+        small: "./movies/dogs/regular/small.jpg",
+        medium: "./movies/dogs/regular/medium.jpg",
+        large: "./movies/dogs/regular/large.jpg",
       },
     },
     year: 2016,
@@ -408,9 +408,9 @@ export const moviesData = [
     title: "Asia in 24 Days",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/asia-in-24-days/regular/small.jpg",
-        medium: "../assets/img/movies/asia-in-24-days/regular/medium.jpg",
-        large: "../assets/img/movies/asia-in-24-days/regular/large.jpg",
+        small: "./movies/asia-in-24-days/regular/small.jpg",
+        medium: "./movies/asia-in-24-days/regular/medium.jpg",
+        large: "./movies/asia-in-24-days/regular/large.jpg",
       },
     },
     year: 2020,
@@ -424,9 +424,9 @@ export const moviesData = [
     title: "The Tasty Tour",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/the-tasty-tour/regular/small.jpg",
-        medium: "../assets/img/movies/the-tasty-tour/regular/medium.jpg",
-        large: "../assets/img/movies/the-tasty-tour/regular/large.jpg",
+        small: "./movies/the-tasty-tour/regular/small.jpg",
+        medium: "./movies/the-tasty-tour/regular/medium.jpg",
+        large: "./movies/the-tasty-tour/regular/large.jpg",
       },
     },
     year: 2016,
@@ -440,9 +440,9 @@ export const moviesData = [
     title: "Darker",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/darker/regular/small.jpg",
-        medium: "../assets/img/movies/darker/regular/medium.jpg",
-        large: "../assets/img/movies/darker/regular/large.jpg",
+        small: "./movies/darker/regular/small.jpg",
+        medium: "./movies/darker/regular/medium.jpg",
+        large: "./movies/darker/regular/large.jpg",
       },
     },
     year: 2017,
@@ -456,9 +456,9 @@ export const moviesData = [
     title: "Unresolved Cases",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/unresolved-cases/regular/small.jpg",
-        medium: "../assets/img/movies/unresolved-cases/regular/medium.jpg",
-        large: "../assets/img/movies/unresolved-cases/regular/large.jpg",
+        small: "./movies/unresolved-cases/regular/small.jpg",
+        medium: "./movies/unresolved-cases/regular/medium.jpg",
+        large: "./movies/unresolved-cases/regular/large.jpg",
       },
     },
     year: 2018,
@@ -472,9 +472,9 @@ export const moviesData = [
     title: "Mission: Saturn",
     thumbnail: {
       regular: {
-        small: "../assets/img/movies/mission-saturn/regular/small.jpg",
-        medium: "../assets/img/movies/mission-saturn/regular/medium.jpg",
-        large: "../assets/img/movies/mission-saturn/regular/large.jpg",
+        small: "./movies/mission-saturn/regular/small.jpg",
+        medium: "./movies/mission-saturn/regular/medium.jpg",
+        large: "./movies/mission-saturn/regular/large.jpg",
       },
     },
     year: 2017,
