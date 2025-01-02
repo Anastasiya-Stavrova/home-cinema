@@ -35,7 +35,6 @@ const MovieTrendCard = ({ movie }: IMovieCardProps) => {
           padding: 0,
           position: "relative",
           display: "flex",
-          color: "white",
         }}
       >
         <img
@@ -87,7 +86,7 @@ const MovieTrendCard = ({ movie }: IMovieCardProps) => {
             <Box>
               <img
                 src={movie.category === "Movies" ? movieIcon : tvSeriesIcon}
-                alt={"Movie Category"}
+                alt="Movie Category"
                 width={16}
                 height={16}
               />
@@ -97,7 +96,7 @@ const MovieTrendCard = ({ movie }: IMovieCardProps) => {
               <Typography
                 fontSize={10}
                 color="#e0e0e0"
-                aria-label="movie category"
+                aria-label="Movie Category"
               >
                 {movie.category}
               </Typography>
@@ -117,14 +116,14 @@ const MovieTrendCard = ({ movie }: IMovieCardProps) => {
               <Typography
                 fontSize={10}
                 color="#e0e0e0"
-                aria-label="movie rating"
+                aria-label="Movie Rating"
               >
                 {movie.rating}
               </Typography>
             </Box>
           </Grid2>
 
-          <Typography padding={0} color="#e0e0e0" aria-label="movie title">
+          <Typography padding={0} color="#e0e0e0" aria-label="Movie Title">
             {movie.title}
           </Typography>
         </Stack>

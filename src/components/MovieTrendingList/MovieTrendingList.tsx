@@ -16,7 +16,7 @@ const MovieTrendingList = ({ trendingList }: IMovieTrendingListProps) => {
       }}
     >
       {trendingList.map((movie) => (
-        <Box key={movie.id}>
+        <Box flex="1" key={movie.id}>
           <Paper elevation={0} sx={{ backgroundColor: "transparent" }}>
             <MovieTrendCard movie={movie} />
           </Paper>

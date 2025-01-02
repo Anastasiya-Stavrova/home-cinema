@@ -24,11 +24,11 @@ const MovieCard = ({ movie }: IMovieCardProps) => {
     >
       <CardContent sx={{ p: 0, position: "relative" }}>
         <Grid2 container spacing={1}>
-          <Box>
+          <Box flex={1}>
             <img
               src={movie.thumbnail.regular.large}
               alt="Movie Img"
-              style={{ width: "300px", height: "100%", borderRadius: "8px" }}
+              style={{ width: "400px", height: "200px", borderRadius: "8px" }}
             />
           </Box>
 
