@@ -63,14 +63,14 @@ const TvSeriesPage = () => {
         {search === "" ? (
           <Box width="100%">
             <Typography variant="h5" component="h1" my={2} fontWeight={300}>
-              Movies
+              Tv Series
             </Typography>
 
             <MoviesList recommendedList={search === "" ? movies : searchList} />
           </Box>
         ) : (
           <Box>
-            <Typography variant="h6">
+            <Typography variant="h6" marginBottom={3}>
               Found {searchList.length} results for "{search}"
             </Typography>
 

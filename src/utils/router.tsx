@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import MoviesPage from "../pages/MoviesPage/MoviesPage";
 import TvSeriesPage from "../pages/TvSeriesPage/TvSeriesPage";
-import BookmarkPage from "../pages/BookmarkPage/BookmarkPage";
+import BookmarksPage from "../pages/BookmarksPage/BookmarksPage";
 import HomePage from "../pages/HomePage/HomePage";
 
 const router = createBrowserRouter([
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/bookmarks",
-    element: <BookmarkPage />,
+    element: <BookmarksPage />,
     errorElement: <ErrorPage />,
   },
 ]);
