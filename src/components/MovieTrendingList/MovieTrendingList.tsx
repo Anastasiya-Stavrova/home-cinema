@@ -1,6 +1,6 @@
 import { Box, Grid2, Paper } from "@mui/material";
 import { IMovieDataType } from "../../types/movieData";
-import MovieCard from "../MovieCard/MovieCard";
+import MovieTrendCard from "../MovieTrendCard/MovieTrendCard";
 
 interface IMovieTrendingListProps {
   trendingList: Array<IMovieDataType>;
@@ -12,7 +12,7 @@ const MovieTrendingList = ({ trendingList }: IMovieTrendingListProps) => {
       {trendingList.map((movie) => (
         <Grid2 key={movie.id}>
           <Paper elevation={0} sx={{ backgroundColor: "transparent" }}>
-            <MovieCard movie={movie} />
+            <MovieTrendCard movie={movie} />
           </Paper>
         </Grid2>
       ))}
