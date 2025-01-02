@@ -1,9 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
-import MoviesPage from "../pages/MoviesPage/MoviesPage";
-import TvSeriesPage from "../pages/TvSeriesPage/TvSeriesPage";
-import BookmarksPage from "../pages/BookmarksPage/BookmarksPage";
 import HomePage from "../pages/HomePage/HomePage";
+import SortedPage from "../pages/SortedPage/SortedPage";
 
 const router = createBrowserRouter([
   {
@@ -13,17 +11,32 @@ const router = createBrowserRouter([
   },
   {
     path: "/movies",
-    element: <MoviesPage />,
+    element: (
+      <SortedPage
+        sortedFanction={(movie) => movie.category === "Movie"}
+        pageTitle="Movies"
+      />
+    ),
     errorElement: <ErrorPage />,
   },
   {
     path: "/tv-series",
-    element: <TvSeriesPage />,
+    element: (
+      <SortedPage
+        sortedFanction={(movie) => movie.category !== "Movie"}
+        pageTitle="Tv Series"
+      />
+    ),
     errorElement: <ErrorPage />,
   },
   {
     path: "/bookmarks",
-    element: <BookmarksPage />,
+    element: (
+      <SortedPage
+        sortedFanction={(movie) => movie.isBookmarked}
+        pageTitle="Bookmarks"
+      />
+    ),
     errorElement: <ErrorPage />,
   },
 ]);

@@ -1,24 +1,30 @@
+import { useContext, useState } from "react";
 import {
-  Box,
+  Typography,
   InputAdornment,
   InputBase,
   Paper,
-  Typography,
+  Box,
 } from "@mui/material";
-import { useContext, useState } from "react";
+import { MovieContext } from "../../context/movie-context";
+import { IMovieDataType } from "../../types/movieData";
 import Layout from "../../components/Layout/Layout";
 import SearchIcon from "../../assets/icons/icon-search.svg";
 import MoviesList from "../../components/MoviesList/MoviesList";
-import { IMovieDataType } from "../../types/movieData";
-import { MovieContext } from "../../context/movie-context";
 
-const BookmarksPage = () => {
+interface ISortedPageProps {
+  sortedFanction: (movie: {
+    category: string;
+    isBookmarked: boolean;
+  }) => boolean;
+  pageTitle: string;
+}
+
+const SortedPage = ({ sortedFanction, pageTitle }: ISortedPageProps) => {
   const [search, setSearch] = useState("");
   const [searchList, setSearchList] = useState<IMovieDataType[]>([]);
   const { state } = useContext(MovieContext);
-  const { movies } = state;
-
-  const bookmarksList = movies.filter((movie) => movie.isBookmarked);
+  const movies = state.movies.filter(sortedFanction);
 
   const handleSearch = (value: string) => {
     setSearch(value);
@@ -63,12 +69,12 @@ const BookmarksPage = () => {
 
       <Box py={2} px={4}>
         {search === "" ? (
-          <Box>
+          <Box width="100%">
             <Typography variant="h5" component="h1" my={2} fontWeight={300}>
-              Bookmarks
+              {pageTitle}
             </Typography>
 
-            <MoviesList recommendedList={bookmarksList} />
+            <MoviesList recommendedList={search === "" ? movies : searchList} />
           </Box>
         ) : (
           <Box>
@@ -84,4 +90,4 @@ const BookmarksPage = () => {
   );
 };
 
-export default BookmarksPage;
+export default SortedPage;
