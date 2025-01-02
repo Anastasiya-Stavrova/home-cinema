@@ -5,7 +5,7 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import { SetStateAction, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import SearchIcon from "../../assets/icons/icon-search.svg";
 import MovieList from "../../components/MovieList/MovieList";
@@ -14,7 +14,7 @@ import { IMovieDataType } from "../../types/movieData";
 import { MovieContext } from "../../context/movie-context";
 
 const HomePage = () => {
-  const [search, setSearch] = useState<string>("");
+  const [search, setSearch] = useState("");
   const [searchList, setSearchList] = useState<IMovieDataType[]>([]);
   const { state } = useContext(MovieContext);
   const { movies } = state;
@@ -22,13 +22,13 @@ const HomePage = () => {
   const trendingList = movies.filter((movie) => movie.isTrending);
   const recommendedList = movies.filter((movie) => !movie.isTrending);
 
-  const handleSearch = (e: { target: { value: SetStateAction<string> } }) => {
-    setSearch(e.target.value);
+  const handleSearch = (value: string) => {
+    setSearch(value);
 
-    const newMoviesList = movies.filter((movie) =>
-      movie.title.toLowerCase().includes(search.toLowerCase())
+    const newList = movies.filter((movie) =>
+      movie.title.toLowerCase().includes(value.toLowerCase())
     );
-    setSearchList(newMoviesList);
+    setSearchList(newList);
   };
 
   return (
@@ -55,7 +55,7 @@ const HomePage = () => {
               border: "none",
             }}
             value={search}
-            onChange={handleSearch}
+            onChange={(e) => handleSearch(e.target.value)}
             startAdornment={
               <InputAdornment position="start">
                 <img
@@ -91,7 +91,7 @@ const HomePage = () => {
           </Box>
         ) : (
           <Box width="100%">
-            <Typography>
+            <Typography marginBottom={3}>
               Found {searchList.length} results for "{search}"
             </Typography>
 

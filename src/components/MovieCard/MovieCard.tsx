@@ -20,30 +20,31 @@ const MovieCard = ({ movie }: IMovieCardProps) => {
   return (
     <Card
       variant="outlined"
-      sx={{ bgcolor: "transparent", color: "#E0E0E0", my: 3, border: "none" }}
+      sx={{ bgcolor: "transparent", color: "#E0E0E0", border: "none" }}
     >
       <CardContent sx={{ p: 0, position: "relative" }}>
         <Grid2 container spacing={1}>
-          <Grid2>
+          <Box>
             <img
               src={movie.thumbnail.regular.large}
-              alt=""
-              style={{ width: "400px", height: "180px", borderRadius: "8px" }}
+              alt="Movie Img"
+              style={{ width: "300px", height: "100%", borderRadius: "8px" }}
             />
-          </Grid2>
+          </Box>
 
-          <Grid2 size={{ xs: 6 }}>
+          <Grid2>
             <Grid2 container spacing={1} alignItems="center">
-              <Grid2>
+              <Box>
                 <Typography
                   fontSize={10}
                   color="#E0E0E0"
-                  aria-label="year of movie"
+                  aria-label="Year of Movie"
                 >
                   {movie.year}
                 </Typography>
-              </Grid2>
-              <Grid2>
+              </Box>
+
+              <Box>
                 <Box
                   sx={{
                     width: "4px",
@@ -52,16 +53,18 @@ const MovieCard = ({ movie }: IMovieCardProps) => {
                     borderRadius: "50%",
                   }}
                 />
-              </Grid2>
-              <Grid2>
+              </Box>
+
+              <Box>
                 <img
                   src={movie.category === "Movies" ? movieIcon : tvSeriesIcon}
-                  alt=""
+                  alt="Category Icon"
                   width={16}
                   height={16}
                 />
-              </Grid2>
-              <Grid2>
+              </Box>
+
+              <Box>
                 <Typography
                   fontSize={10}
                   color="#E0E0E0"
@@ -69,8 +72,9 @@ const MovieCard = ({ movie }: IMovieCardProps) => {
                 >
                   {movie.category}
                 </Typography>
-              </Grid2>
-              <Grid2>
+              </Box>
+
+              <Box>
                 <Box
                   sx={{
                     width: "4px",
@@ -79,21 +83,24 @@ const MovieCard = ({ movie }: IMovieCardProps) => {
                     borderRadius: "50%",
                   }}
                 />
-              </Grid2>
-              <Grid2>
+              </Box>
+
+              <Box>
                 <Typography
                   fontSize={10}
                   color="#E0E0E0"
-                  aria-label="movie rating"
+                  aria-label="Movie Rating"
                 >
                   {movie.rating}
                 </Typography>
-              </Grid2>
+              </Box>
             </Grid2>
+
             <Typography aria-label="movie rating" padding={0}>
               {movie.title}
             </Typography>
           </Grid2>
+
           <Grid2
             size={{ xs: 2 }}
             sx={{ position: "absolute", top: 0, right: 0 }}
