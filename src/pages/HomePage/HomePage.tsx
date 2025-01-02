@@ -5,17 +5,30 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import { SetStateAction, useState } from "react";
+import { SetStateAction, useContext, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import SearchIcon from "../../assets/icons/icon-search.svg";
 import MovieList from "../../components/MovieList/MovieList";
 import MovieTrendingList from "../../components/MovieTrendingList/MovieTrendingList";
+import { IMovieDataType } from "../../types/movieData";
+import { MovieContext } from "../../context/movie-context";
 
 const HomePage = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState<string>("");
+  const [searchList, setSearchList] = useState<IMovieDataType[]>([]);
+  const { state } = useContext(MovieContext);
+  const { movies } = state;
+
+  const trendingList = movies.filter((movie) => movie.isTrending);
+  const recommendedList = movies.filter((movie) => !movie.isTrending);
 
   const handleSearch = (e: { target: { value: SetStateAction<string> } }) => {
     setSearch(e.target.value);
+
+    const newMoviesList = movies.filter((movie) =>
+      movie.title.toLowerCase().includes(search.toLowerCase())
+    );
+    setSearchList(newMoviesList);
   };
 
   return (

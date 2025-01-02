@@ -1,4 +1,4 @@
-interface MovieDataType {
+interface IMovieDataType {
   id: string;
   title: string;
   thumbnail: {
@@ -19,4 +19,4 @@ interface MovieDataType {
   isTrending: boolean;
 }
 
-export type { MovieDataType };
+export type { IMovieDataType };

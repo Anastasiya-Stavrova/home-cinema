@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useReducer } from "react";
-import { MovieDataType } from "../types/movieData";
+import { IMovieDataType } from "../types/movieData";
 import { moviesData } from "../consts/data";
 
 interface IMovieContextProps {
@@ -7,7 +7,7 @@ interface IMovieContextProps {
 }
 
 interface IMovieState {
-  movies: MovieDataType[];
+  movies: IMovieDataType[];
 }
 
 interface IMovieAction {
@@ -15,7 +15,7 @@ interface IMovieAction {
   id: string;
 }
 
-const MovieList: MovieDataType[] = moviesData;
+const MovieList: IMovieDataType[] = moviesData;
 
 const initialMovieState: IMovieState = {
   movies: MovieList,
