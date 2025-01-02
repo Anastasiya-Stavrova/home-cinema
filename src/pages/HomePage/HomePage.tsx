@@ -1,6 +1,15 @@
-import { Box, InputAdornment, InputBase, Paper } from "@mui/material";
-import Layout from "../../components/Layout/Layout";
+import {
+  Box,
+  InputAdornment,
+  InputBase,
+  Paper,
+  Typography,
+} from "@mui/material";
 import { SetStateAction, useState } from "react";
+import Layout from "../../components/Layout/Layout";
+import SearchIcon from "../../assets/icons/icon-search.svg";
+import MovieList from "../../components/MovieList/MovieList";
+import MovieTrendingList from "../../components/MovieTrendingList/MovieTrendingList";
 
 const HomePage = () => {
   const [search, setSearch] = useState("");
@@ -14,6 +23,7 @@ const HomePage = () => {
       <Box>
         <Paper
           component="form"
+          elevation={20}
           sx={{
             display: "flex",
             alignItems: "center",
@@ -35,11 +45,38 @@ const HomePage = () => {
             onChange={handleSearch}
             startAdornment={
               <InputAdornment position="start">
-                <img src={""} alt="search icon" width={20} height={20} />
+                <img
+                  src={SearchIcon}
+                  alt="search icon"
+                  width={20}
+                  height={20}
+                />
               </InputAdornment>
             }
           />
         </Paper>
+      </Box>
+      <Box py={2} px={4}>
+        {search === "" ? (
+          <Box width="100%">
+            <Box width="100%">
+              <Typography variant="h5" component="h1" my={6} fontWeight={400}>
+                Trending
+              </Typography>
+              <MovieTrendingList trendingList={trendingList} />
+            </Box>
+            <Box width="100%">
+              <Typography variant="h5" component="h1" my={6} fontWeight={400}>
+                Recommended For You
+              </Typography>
+              <MovieList recommendedList={recommendedList} />
+            </Box>
+          </Box>
+        ) : (
+          <Box width="100%">
+            <Typography>Found</Typography>
+          </Box>
+        )}
       </Box>
     </Layout>
   );

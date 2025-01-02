@@ -2,11 +2,11 @@ import { Box } from "@mui/material";
 import { ReactNode } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 
-interface LayoutProps {
+interface ILayoutProps {
   children: ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children }: ILayoutProps) => {
   return (
     <Box
       sx={{

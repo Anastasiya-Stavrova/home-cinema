@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "../../consts/navLinks";
-import { Box, Hidden, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const Sidebar = () => {
   const { pathname } = useLocation();
@@ -39,7 +39,11 @@ const Sidebar = () => {
           width: "100%",
         }}
       >
-        <Hidden smDown>
+        <Box
+          sx={{
+            display: { xs: "none", sm: "block" },
+          }}
+        >
           <Typography
             variant="h5"
             component="h1"
@@ -47,9 +51,10 @@ const Sidebar = () => {
             fontWeight={400}
             fontSize={18}
           >
-            Movies App
+            Home Cinema
           </Typography>
-        </Hidden>
+        </Box>
+
         <Box
           sx={{
             py: {
@@ -91,9 +96,14 @@ const Sidebar = () => {
                     }`,
                   }}
                 />
-                <Hidden mdDown>
+
+                <Box
+                  sx={{
+                    display: { xs: "none", md: "block" },
+                  }}
+                >
                   <Typography>{link.name}</Typography>
-                </Hidden>
+                </Box>
               </Box>
             </Link>
           ))}
