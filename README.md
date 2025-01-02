@@ -1,6 +1,6 @@
 # Home Cinema
 
-### A simple site to watch popular and recommended movies and TV series that you can add to your bookmarks..
+### 💻 A simple site to watch popular and recommended movies and TV series that you can add to your bookmarks..
 
 ### :hammer_and_wrench: Technologies used in the project: 
 
