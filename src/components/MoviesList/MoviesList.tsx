@@ -1,4 +1,4 @@
-import { Grid2, Paper } from "@mui/material";
+import { ImageList, useMediaQuery } from "@mui/material";
 import { IMovieDataType } from "../../types/movieData";
 import MovieCard from "../MovieCard/MovieCard";
 
@@ -7,16 +7,18 @@ interface IMovieListProps {
 }
 
 const MoviesList = ({ recommendedList }: IMovieListProps) => {
+  const isSm = useMediaQuery("(min-width:600px) and (max-width:959px)");
+  const isMd = useMediaQuery("(min-width:959px) and (max-width:1279px)");
+  const isLg = useMediaQuery("(min-width:1279px)");
+
+  const cols = isSm ? 2 : isMd ? 3 : isLg ? 4 : 1;
+
   return (
-    <Grid2 container spacing={2}>
+    <ImageList cols={cols} gap={16}>
       {recommendedList.map((movie) => (
-        <Grid2 key={movie.id} size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
-          <Paper elevation={0} sx={{ backgroundColor: "transparent" }}>
-            <MovieCard movie={movie} />
-          </Paper>
-        </Grid2>
+        <MovieCard movie={movie} />
       ))}
-    </Grid2>
+    </ImageList>
   );
 };
 

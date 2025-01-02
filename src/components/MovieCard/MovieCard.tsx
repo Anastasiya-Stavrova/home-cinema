@@ -1,7 +1,14 @@
 import { useContext } from "react";
 import { IMovieDataType } from "../../types/movieData";
 import { MovieContext } from "../../context/movie-context";
-import { Box, Card, CardContent, Grid2, Typography } from "@mui/material";
+import {
+  Box,
+  Grid2,
+  IconButton,
+  ImageListItem,
+  ImageListItemBar,
+  Typography,
+} from "@mui/material";
 import BookmarkIcon from "../Icons/bookmark-icon";
 import BookmarkEmptyIcon from "../Icons/bookmark-empy-icon";
 import movieIcon from "../../assets/icons/icon-category-movie.svg";
@@ -18,20 +25,50 @@ const MovieCard = ({ movie }: IMovieCardProps) => {
   };
 
   return (
-    <Card
-      variant="outlined"
+    <ImageListItem
+      key={movie.id}
       sx={{ bgcolor: "transparent", color: "#E0E0E0", border: "none" }}
+      cols={1}
     >
-      <CardContent sx={{ p: 0, position: "relative" }}>
-        <Grid2 container spacing={1}>
-          <Box flex={1}>
-            <img
-              src={movie.thumbnail.regular.large}
-              alt="Movie Img"
-              style={{ width: "400px", height: "200px", borderRadius: "8px" }}
-            />
-          </Box>
+      <img
+        src={movie.thumbnail.regular.large}
+        alt="Movie Img"
+        style={{ borderRadius: "8px" }}
+      />
 
+      <ImageListItemBar
+        position="top"
+        sx={{
+          backgroundColor: "transparent",
+          marginTop: "8px",
+          marginRight: "8px",
+        }}
+        actionIcon={
+          <Box>
+            <IconButton
+              sx={{
+                zIndex: 100,
+                p: "1rem",
+                backgroundColor: "black",
+                borderRadius: "100%",
+                cursor: "pointer",
+                "&: hover": { backgroundColor: "black", opacity: 0.7 },
+              }}
+              onClick={() => handleToggleBookmark(movie.id)}
+            >
+              {movie.isBookmarked ? (
+                <BookmarkIcon fill={"#e0e0e0"} />
+              ) : (
+                <BookmarkEmptyIcon />
+              )}
+            </IconButton>
+          </Box>
+        }
+        actionPosition="right"
+      />
+
+      <ImageListItemBar
+        title={
           <Grid2>
             <Grid2 container spacing={1} alignItems="center">
               <Box>
@@ -100,40 +137,10 @@ const MovieCard = ({ movie }: IMovieCardProps) => {
               {movie.title}
             </Typography>
           </Grid2>
-
-          <Grid2
-            size={{ xs: 2 }}
-            sx={{ position: "absolute", top: 0, right: 0 }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "flex-end",
-                alignItems: "center",
-                p: "1rem",
-              }}
-            >
-              <Box
-                sx={{
-                  p: "1rem",
-                  backgroundColor: "black",
-                  borderRadius: "100%",
-                  cursor: "pointer",
-                  "&:hover": { opacity: 0.8 },
-                }}
-                onClick={() => handleToggleBookmark(movie.id)}
-              >
-                {movie.isBookmarked ? (
-                  <BookmarkIcon fill={"#E0E0E0"} />
-                ) : (
-                  <BookmarkEmptyIcon />
-                )}
-              </Box>
-            </Box>
-          </Grid2>
-        </Grid2>
-      </CardContent>
-    </Card>
+        }
+        position="below"
+      />
+    </ImageListItem>
   );
 };
 
