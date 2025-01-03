@@ -70,7 +70,7 @@ const SortedPage = ({ sortedFanction, pageTitle }: ISortedPageProps) => {
       <Box py={2} px={4}>
         {search === "" ? (
           <Box width="100%">
-            <Typography variant="h5" component="h1" my={2} fontWeight={300}>
+            <Typography variant="h5" component="h1" my={3} fontWeight={300}>
               {pageTitle}
             </Typography>
 
@@ -78,7 +78,7 @@ const SortedPage = ({ sortedFanction, pageTitle }: ISortedPageProps) => {
           </Box>
         ) : (
           <Box>
-            <Typography variant="h6" marginBottom={3}>
+            <Typography variant="h6" my={3}>
               Found {searchList.length} results for "{search}"
             </Typography>
 

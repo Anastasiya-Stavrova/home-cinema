@@ -74,7 +74,7 @@ const HomePage = () => {
         {search === "" ? (
           <Box width="100%">
             <Box width="100%">
-              <Typography variant="h5" component="h1" my={6} fontWeight={400}>
+              <Typography variant="h5" component="h1" my={3} fontWeight={400}>
                 Trending
               </Typography>
 
@@ -82,7 +82,7 @@ const HomePage = () => {
             </Box>
 
             <Box width="100%">
-              <Typography variant="h5" component="h1" my={6} fontWeight={400}>
+              <Typography variant="h5" component="h1" my={3} fontWeight={400}>
                 Recommended For You
               </Typography>
 
@@ -91,7 +91,7 @@ const HomePage = () => {
           </Box>
         ) : (
           <Box width="100%">
-            <Typography marginBottom={3}>
+            <Typography variant="h6" my={3}>
               Found {searchList.length} results for "{search}"
             </Typography>
 
