@@ -26,7 +26,6 @@ const MovieCard = ({ movie }: IMovieCardProps) => {
 
   return (
     <ImageListItem
-      key={movie.id}
       sx={{ bgcolor: "transparent", color: "#E0E0E0", border: "none" }}
       cols={1}
     >

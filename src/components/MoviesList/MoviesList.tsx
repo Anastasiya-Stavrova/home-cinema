@@ -16,7 +16,7 @@ const MoviesList = ({ recommendedList }: IMovieListProps) => {
   return (
     <ImageList cols={cols} gap={16}>
       {recommendedList.map((movie) => (
-        <MovieCard movie={movie} />
+        <MovieCard movie={movie} key={movie.id} />
       ))}
     </ImageList>
   );

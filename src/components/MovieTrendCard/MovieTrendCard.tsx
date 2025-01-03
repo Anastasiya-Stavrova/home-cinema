@@ -17,20 +17,21 @@ import tvSeriesIcon from "../../assets/icons/icon-category-tv.svg";
 
 interface IMovieCardProps {
   movie: IMovieDataType;
+  width: number;
 }
 
-const MovieTrendCard = ({ movie }: IMovieCardProps) => {
+const MovieTrendCard = ({ movie, width }: IMovieCardProps) => {
   const { dispatch } = useContext(MovieContext);
   const handleToggleBookmark = (id: string) => {
     dispatch({ type: "TOOGLE BOOKMARK", id });
   };
 
   return (
-    <ImageListItem key={movie.id}>
+    <ImageListItem>
       <img
         src={movie.thumbnail.regular.large}
         alt="Movie Title"
-        style={{ width: "300px", height: "100%", borderRadius: "8px" }}
+        style={{ width: width, height: "100%", borderRadius: "8px" }}
       />
 
       <Box
@@ -84,7 +85,7 @@ const MovieTrendCard = ({ movie }: IMovieCardProps) => {
             bottom={0}
             left={0}
             right={0}
-            px={3}
+            px={4}
             py={2}
           >
             <Grid2 container alignItems="center" spacing={1}>

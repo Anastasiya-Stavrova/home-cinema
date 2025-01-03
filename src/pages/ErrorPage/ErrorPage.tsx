@@ -10,7 +10,7 @@ const ErrorPage = () => {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexWrap: { xs: "wrap", md: "no-wrap" },
+          flexWrap: { xs: "wrap", md: "nowrap" },
           alignItems: "start",
           justifyContent: { xs: "center", md: "space-around" },
           overflowY: "hidden",
@@ -22,7 +22,7 @@ const ErrorPage = () => {
             display: "flex",
             flexDirection: "column",
             gap: "1.5rem",
-            paddingTop: "150px",
+            paddingTop: { xs: "0px", md: "150px" },
           }}
         >
           <Typography component="h2" variant="h4" fontWeight={600}>
