@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useReducer } from "react";
 import { IMovieDataType } from "../types/movieData";
-import { moviesData } from "../consts/data";
+import axios from "axios";
 
 interface IMovieContextProps {
   children: ReactNode;
@@ -15,10 +15,18 @@ interface IMovieAction {
   id: string;
 }
 
-const MovieList: IMovieDataType[] = moviesData;
+const fetchData = async (): Promise<IMovieDataType[] | undefined> => {
+  try {
+    const response = await axios.get(`http://localhost:3000/movies`);
+    const dataArray = response.data;
+    return dataArray;
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 const initialMovieState: IMovieState = {
-  movies: MovieList,
+  movies: (await fetchData()) || [],
 };
 
 const MovieReduser = (

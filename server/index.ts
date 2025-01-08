@@ -2,15 +2,15 @@ import express, { Application, Request, Response } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import { IMovieDetails, MovieDetailsModel } from "./models/movie";
+import * as dotenv from "dotenv";
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-require("dotenv").config();
+dotenv.config();
 
 const app: Application = express();
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT || 3000;
+const port = 3000;
 const mongoUri = process.env.MONGO_URI || "";
 
 (async () => {
