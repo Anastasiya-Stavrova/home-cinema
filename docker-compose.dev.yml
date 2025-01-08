@@ -1,0 +1,68 @@
+services:
+  mongodb:
+    image: mongo:latest
+    restart: always
+    env_file: ./.env
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=$MONGODB_USER
+      - MONGO_INITDB_ROOT_PASSWORD=$MONGODB_PASSWORD
+    ports:
+      - $MONGODB_LOCAL_PORT:$MONGODB_DOCKER_PORT
+    volumes:
+      - mongodb_data_container:/data/db
+    networks:
+      - web_network
+
+  nginx:
+    depends_on:
+      - server
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - "3050:80"
+    networks:
+      - web_network
+
+  server:
+    depends_on:
+      - mongodb
+    restart: on-failure
+    build:
+      dockerfile: Dockerfile.dev
+      context: "./server"
+    env_file: ./.env
+    environment:
+      - MONGODB_USER=$MONGODB_USER
+      - MONGODB_PASSWORD=$MONGODB_PASSWORD
+      - MONGODB_DATABASE=$MONGODB_DATABASE
+      - MONGODB_LOCAL_PORT=$MONGODB_DOCKER_PORT
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/server/node_modules
+      - ./server:/app/server
+    networks:
+      - web_network
+
+  client:
+    depends_on:
+      - server
+    restart: on-failure
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
+    volumes:
+      - /app/client/node_modules
+      - ./client:/app/client
+    networks:
+      - web_network
+
+volumes:
+  mongodb_data_container:
+
+networks:
+  web_network:
+    driver: bridge

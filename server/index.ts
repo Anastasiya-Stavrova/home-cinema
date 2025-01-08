@@ -11,7 +11,11 @@ app.use(cors());
 app.use(express.json());
 
 const port = 3000;
-const mongoUri = process.env.MONGO_URI || "";
+
+const mongoUri =
+  process.env.MONGODB_USER && process.env.MONGODB_PASSWORD
+    ? `mongodb://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_DOCKER_HOST}:${process.env.MONGODB_LOCAL_PORT}/${process.env.MONGODB_DATABASE}`
+    : `mongodb://localhost:${process.env.MONGODB_LOCAL_PORT}/${process.env.MONGODB_DATABASE}`;
 
 (async () => {
   try {

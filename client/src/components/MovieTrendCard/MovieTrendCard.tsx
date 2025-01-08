@@ -62,7 +62,7 @@ const MovieTrendCard = ({ movie, width }: IMovieCardProps) => {
                 cursor: "pointer",
                 "&: hover": { backgroundColor: "black", opacity: 0.7 },
               }}
-              onClick={() => handleToggleBookmark(movie.id)}
+              onClick={() => handleToggleBookmark(String(movie.id))}
             >
               {movie.isBookmarked ? (
                 <BookmarkIcon fill={"#e0e0e0"} />
