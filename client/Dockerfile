@@ -1,6 +1,6 @@
 FROM node:20-slim as builder
 
-WORKDIR /app/client
+WORKDIR /app
 
 COPY ./package.json ./
 RUN npm i
@@ -13,4 +13,4 @@ FROM nginx:stable-alpine
 EXPOSE 5173
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/client/dist /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html

@@ -1,6 +1,6 @@
 FROM node:20-slim
 
-WORKDIR /app/server
+WORKDIR /app
 
 COPY ./package.json ./
 RUN npm i
